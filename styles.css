@@ -1,10 +1,28 @@
+/* general styling */
 * {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
+    filter: grayscale();
 }
 
+a {
+    text-decoration: none;
+}
+
+/* Header component */
 header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1em;
+}
+
+header a {
+    padding: 0 0.5em;
+}
+
+/* main section */
+section {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
@@ -13,16 +31,26 @@ header {
     margin-bottom: 2em;
 }
 
-header h1 {
+section h1 {
     font-size: 1.2em;
+    margin-top: 1em;
 }
 
 
-/* Media at bottom */
+/* Media at bottom, responsivnes of the web application*/
 
 /* h1 */
 @media only screen and (max-width: 600px) {
-    header h1 {
+    section h1 {
+        font-size: 1.1em;
+    }
+
+    section h2 {
         font-size: 1em;
+    }
+
+    section img {
+        width: auto;
+        height: 20vh;
     }
 }
