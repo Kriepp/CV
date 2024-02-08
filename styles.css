@@ -10,6 +10,55 @@ a {
     text-decoration: none;
 }
 
+/* Nav  */
+nav {
+    box-sizing: border-box;
+    transition: all 0.5s ease-in; 
+    padding-top: 0.5em;
+}
+
+nav a {
+    padding: .5em .8em;
+    color: rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+nav a::before,
+nav a::after {
+    content: '';
+    position: absolute;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+nav a::before {
+    content: '';
+    right: 0;
+    top: 0;
+    border-top: 3px solid #000000;
+    border-right: 3px solid #000000;
+    transform: translate(-100%, 50%);
+}
+
+nav a:after {
+  content: '';
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid #000000;
+  border-left: 3px solid #000000;
+  transform: translate(100%, -50%)
+}
+
+nav a:hover:before,
+nav a:hover:after{
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+nav a:hover {
+  color: #000000;
+}
+
 /* Header component */
 header {
     display: flex;
