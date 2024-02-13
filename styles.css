@@ -21,23 +21,14 @@ header {
     display: flex;
     justify-content: flex-end;
     position: sticky;
+    padding-top: 1em;
     margin-bottom: 1em;
+    box-sizing: border-box;
+    transition: all 0.69s ease-in-out; 
 }
 
 header a {
     padding: 0 0.5em;
-}
-
-nav {
-    box-sizing: border-box;
-    transition: all 0.5s ease-in; 
-    padding-top: 0.5em;
-}
-
-nav a {
-    padding: .5em .8em;
-    color: rgba(0, 0, 0, 0.5);
-    position: relative;
 }
 
 nav a::before,
@@ -77,17 +68,32 @@ nav a:hover {
 }
 
 /* main section */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 12em;
+}
+
+.image-container img {
+    position: absolute;
+    left: 12.4em;
+    object-fit: cover;
+    z-index: 1;
+    height: 20vh;
+}
+
+.image-container h1 {
+    position: relative;
+    z-index: 0;
+    padding: 1em 6em 1em 2em;
+}
+
 section {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     margin: 0.2em 0 2em 0;
-}
-
-section h1 {
-    font-size: 1.2em;
-    margin-top: 1em;
 }
 
 section h2 {
@@ -97,6 +103,7 @@ section h2 {
 
 section p {
     padding-left: 0.5em;
+    text-indent: 1em;
 }
 
 section ul {
@@ -108,21 +115,30 @@ section ul li {
     padding: 0.1em 0;
 }
 
+/* footer section */
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin: 0.5em auto;
+}
+
 
 /* Media at bottom, responsivnes of the web application*/
 
 /* h1 */
-@media only screen and (max-width: 600px) {
-    section h1 {
-        font-size: 1.1em;
+@media only screen and (min-width: 600px) {
+    .image-container {
+        height: auto;
+    }
+
+    .image-container img {
+        position: relative;
+        right: 0;
+        left: 0;
     }
 
     section h2 {
-        font-size: 1em;
-    }
-
-    section img {
-        width: auto;
-        height: 20vh;
+        font-size: 2em;
     }
 }
