@@ -1,17 +1,7 @@
-const projects = {
-  title: 'Projects',
-  projects: [
-    {
-      title: 'Project 1',
-      description: 'This is the first project',
-      link: 'https://www.google.com',
-    },
-    {
-      title: 'Project 2',
-      description: 'This is the second project',
-      link: 'https://www.google.com',
-    },
-  ],
+let liItems = document.querySelectorAll('ul li');
+let index = 0;
+window.show = function (increase) {
+  index = +increase;
+  index = Math.min(Math.max(index, 0), liItems.length - 1);
+  liItems[index].scrollIntoView({ behavior: 'smooth' });
 };
-
-document.getElementById('projectsTitle').innerHTML = projects.title;

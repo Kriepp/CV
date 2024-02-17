@@ -119,6 +119,58 @@ section ul li {
     padding: 0.1em 0;
 }
 
+#carousel-container {
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+#carousel-container h2 {
+    font-size: 1.1em;
+    display: block;
+    padding: 0 35%;
+}
+
+.carousel {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.carousel li {
+    display: block;
+}
+
+section ul li figure img {
+    filter: none;
+    width: 15em;
+    height: auto;
+    object-fit: cover;
+    padding-left: 2.5em;
+}
+
+section ul li figcaption {
+    font-size: small;
+}
+
+#prev-btn #next-btn {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+#prev-btn {
+    position: absolute;
+    left: 0;
+}
+
+#next-btn {
+    position: absolute;
+    right: 0;
+}
+
 /* footer section */
 footer {
     display: flex;
