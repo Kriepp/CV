@@ -76,7 +76,8 @@ nav a:hover {
 
 .image-container img {
     position: absolute;
-    left: 12.4em;
+    top: 2em;
+    left: 8em;
     object-fit: cover;
     z-index: 1;
     height: 20vh;
@@ -107,6 +108,9 @@ section p {
 }
 
 section ul {
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
     list-style: none;
     padding-left: 0.5em;
 }
@@ -116,7 +120,6 @@ section ul li {
 }
 
 /* footer section */
-
 footer {
     display: flex;
     justify-content: center;
@@ -125,8 +128,6 @@ footer {
 
 
 /* Media at bottom, responsivnes of the web application*/
-
-/* h1 */
 @media only screen and (min-width: 600px) {
     .image-container {
         height: auto;
@@ -136,9 +137,19 @@ footer {
         position: relative;
         right: 0;
         left: 0;
+        top: 0;
+        height: 20em;
+        width: auto;
     }
 
     section h2 {
         font-size: 2em;
+    }
+
+    section ul {
+        padding: 1em;
+        border-radius: 1em;
+        -webkit-border-radius: 10px 10px 10px 10px;
+        border: 0.1em solid #000000;
     }
 }
