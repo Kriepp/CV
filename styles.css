@@ -134,13 +134,14 @@ section ul li {
 
 .carousel {
     display: flex;
+    flex-direction: row;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
 
-.carousel li {
-    display: block;
+#carousel-container ul li {
+    margin-right: 3em;
 }
 
 section ul li figure img {
@@ -153,6 +154,7 @@ section ul li figure img {
 
 section ul li figcaption {
     font-size: small;
+    padding-left: 3em;
 }
 
 #prev-btn #next-btn {
