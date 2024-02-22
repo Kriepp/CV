@@ -1,21 +1,32 @@
+// Carousel
 let liItems = document.querySelectorAll('ul.carousel > li');
-const items = Array.from(liItems);
-let index = 0;
 const prevButton = document.getElementById('prev-btn');
 const nextButton = document.getElementById('next-btn');
 
-window.show = function (increase) {
-  index = index + increase;
+let index = 0;
+
+// Function to update the index of the carousel
+window.showPrevious = function (decrease) {
+  index = index - decrease;
+  // infinite scrolling
+  if (index < 0) index = liItems.length;
   index = Math.min(Math.max(index, 0), liItems.length - 1);
   liItems[index].scrollIntoView({ behavior: 'smooth' });
 };
 
-// Not working
+window.showNext = function (increase) {
+  index = index + increase;
+  // infinite scrolling
+  if (index >= liItems.length) index = 0;
+  index = Math.min(Math.max(index, 0), liItems.length - 1);
+  liItems[index].scrollIntoView({ behavior: 'smooth' });
+};
+
+// Event listener for updating the carousel
 prevButton.addEventListener('click', function () {
-  show(-1);
+  showPrevious(1);
 });
 
-// Working
 nextButton.addEventListener('click', function () {
-  show(1);
+  showNext(1);
 });
