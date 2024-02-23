@@ -3,11 +3,12 @@
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    filter: grayscale();
 }
 
 a {
     text-decoration: none;
+    color: #000000;
+    cursor: pointer;
 }
 
 hr {
@@ -81,6 +82,7 @@ nav a:hover {
     object-fit: cover;
     z-index: 1;
     height: 20vh;
+    filter: grayscale();
 }
 
 .image-container h1 {
@@ -120,6 +122,7 @@ section ul li {
 }
 
 #carousel-container {
+    justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
@@ -128,8 +131,6 @@ section ul li {
 
 #carousel-container h2 {
     font-size: 1.1em;
-    display: block;
-    padding: 0 35%;
 }
 
 .carousel {
@@ -141,7 +142,7 @@ section ul li {
 }
 
 #carousel-container ul li {
-    margin-right: 3em;
+    padding: 1em 20vw;
 }
 
 section ul li figure img {
@@ -149,12 +150,10 @@ section ul li figure img {
     width: 15em;
     height: auto;
     object-fit: cover;
-    padding-left: 2.5em;
 }
 
 section ul li figcaption {
     font-size: small;
-    padding-left: 3em;
 }
 
 #prev-btn #next-btn {
@@ -166,11 +165,13 @@ section ul li figcaption {
 #prev-btn {
     position: absolute;
     left: 0;
+    margin: 0 1em
 }
 
 #next-btn {
     position: absolute;
     right: 0;
+    margin: 0 1em
 }
 
 /* footer section */
@@ -182,9 +183,13 @@ footer {
 
 
 /* Media at bottom, responsivnes of the web application*/
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 400px) {
     .image-container {
         height: auto;
+    }
+
+    .image-container h1 {
+        padding: 1em;
     }
 
     .image-container img {
@@ -192,8 +197,13 @@ footer {
         right: 0;
         left: 0;
         top: 0;
-        height: 20em;
+        height: 15em;
         width: auto;
+    }
+
+    section p {
+        margin-left: auto;
+        font-size: large;
     }
 
     section h2 {
@@ -204,6 +214,18 @@ footer {
         padding: 1em;
         border-radius: 1em;
         -webkit-border-radius: 10px 10px 10px 10px;
-        border: 0.1em solid #000000;
+    }
+
+    section ul li figure img {
+        height: auto;
+        width: 60vw;
+    }
+
+    section ul li figcaption {
+        font-size: large;
+    }
+
+    #carousel-container h2 {
+        font-size: 2em;
     }
 }
