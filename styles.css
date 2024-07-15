@@ -33,6 +33,7 @@ header a {
 }
 
 /* main section */
+
 .image-container {
     position: relative;
     width: 100%;
@@ -152,54 +153,17 @@ footer {
     gap: 1em;
 }
 
+small {
+    font-size: small;
+    display: flex;
+    justify-content: center;
+}
+
 /* Media at bottom, responsivnes of the web application*/
-@media only screen and (min-width: 380px) {
-    .image-container {
-        height: auto;
-    }
+@media only screen and (min-width: 380px) {}
 
-    .image-container h1 {
-        padding: 1em;
-    }
-
-    .image-container img {
-        position: relative;
-        right: 0;
-        left: 0;
-        top: 0;
-        height: 15em;
-        width: auto;
-    }
-
-    .introduction-section {
-        max-width: 40em;
-    }
-
+@media only screen and (min-width: 768px) {
     section p {
-        margin-left: auto;
-        font-size: large;
-    }
-
-    section h2 {
-        font-size: 2em;
-    }
-
-    section ul {
-        padding: 1em;
-        border-radius: 1em;
-        -webkit-border-radius: 10px 10px 10px 10px;
-    }
-
-    section ul li figure img {
-        height: auto;
-        width: 60vw;
-    }
-
-    section ul li figcaption {
-        font-size: large;
-    }
-
-    #carousel-container h2 {
-        font-size: 2em;
+        padding: 0 10em 0 10em;
     }
 }
