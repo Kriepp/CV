@@ -3,6 +3,9 @@ let liItems = document.querySelectorAll('ul.carousel > li');
 const prevButton = document.getElementById('prev-btn');
 const nextButton = document.getElementById('next-btn');
 
+// Elements to animate
+const animateElements = document.querySelectorAll('.animate');
+
 let index = 0;
 
 // Function to update the index of the carousel
@@ -29,4 +32,10 @@ prevButton.addEventListener('click', function () {
 
 nextButton.addEventListener('click', function () {
   showNext(1);
+});
+
+animateElements.forEach((element, index) => {
+  setTimeout(() => {
+    element.classList.add('show');
+  }, index * 250);
 });
