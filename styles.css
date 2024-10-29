@@ -1,10 +1,13 @@
 /* general styling */
 /* TODO grid responsive */
-* {
+*,
+::after,
+::before {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* outline: 3px lime solid; */
 }
 
 section {
@@ -32,11 +35,18 @@ header a {
 .wrapper-introduction {
   display: flexbox;
   padding-inline: 1em;
+  margin-bottom: 3em;
 }
 
 .wrapper-introduction img {
   filter: grayscale();
   padding-block: 1em;
+  width: 80%;
+}
+
+.wrapper-introduction h1,
+.wrapper-introduction h2 {
+  text-shadow: 0 0 1em #0c090f59, 0 0 1em #1c172059;
 }
 
 .wrapper-introduction h1 {
@@ -45,7 +55,19 @@ header a {
 }
 
 .wrapper-introduction h2 {
-  font-size: larger;
+  font-size: large;
+}
+
+/* education */
+.edu-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.wrapper-education {
+  display: flex;
+  margin-block: 2em;
 }
 
 /* courses */
