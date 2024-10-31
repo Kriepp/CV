@@ -16,17 +16,29 @@ section {
   flex-direction: column;
 }
 
+section ul {
+  list-style: none;
+  padding-left: 0.5em;
+}
+
 /* Header component */
 header {
+  background: linear-gradient(
+    112.1deg,
+    rgb(4, 4, 5) 11.4%,
+    rgb(41, 46, 61) 70.2%
+  );
   display: flex;
   justify-content: flex-end;
-  padding-block: 0.5em;
-  border-bottom: #000000 0.2em solid;
+  padding-block: 0.5rem;
+  position: sticky;
 }
 
 header a {
-  padding-inline: 0.5em;
-  color: #000000;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 200;
+  padding-inline: 0.5rem;
+  color: white;
   text-decoration: none;
 }
 
@@ -34,19 +46,19 @@ header a {
 
 .wrapper-introduction {
   display: flexbox;
-  padding-inline: 1em;
-  margin-bottom: 3em;
+  padding-inline: 1rem;
+  margin-bottom: 3rem;
 }
 
 .wrapper-introduction img {
   filter: grayscale();
-  padding-block: 1em;
+  padding-block: 1rem;
   width: 80%;
 }
 
 .wrapper-introduction h1,
 .wrapper-introduction h2 {
-  text-shadow: 0 0 1em #0c090f59, 0 0 1em #1c172059;
+  text-shadow: 0 0 1rem #0c090f59, 0 0 1rem #1c172059;
 }
 
 .wrapper-introduction h1 {
@@ -60,28 +72,25 @@ header a {
 
 /* education */
 .edu-title {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1em;
+  padding-left: 1rem;
+  margin-top: 1rem;
+  font-size: x-large;
 }
 
 .wrapper-education {
   display: flex;
-  margin-block: 2em;
+  border-style: solid;
+  border-radius: 2rem;
+  margin: 0.1rem 1rem;
+  padding: 0.4rem;
 }
 
-/* courses */
-section ul {
-  display: flex;
-  flex-direction: column;
-  justify-items: flex-start;
-  list-style: none;
-  padding-left: 0.5em;
+.wrapper-education li {
+  padding: 0.4rem;
+  font-size: large;
 }
 
-section ul li {
-  padding: 0.1em 0;
-}
+/* projects */
 
 #carousel-container {
   justify-content: center;
