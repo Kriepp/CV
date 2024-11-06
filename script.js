@@ -1,41 +1,38 @@
-// Carousel
-let liItems = document.querySelectorAll('ul.carousel > li');
-const prevButton = document.getElementById('prev-btn');
-const nextButton = document.getElementById('next-btn');
+fetch('http://localhost:5000/test')
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+  .catch((error) => console.error('Fetch error:', error));
 
-// Elements to animate
-const animateElements = document.querySelectorAll('.animate');
+fetch('http://localhost:5000/education')
+  .then((response) => response.json())
+  .then((education) => {
+    const containerEdu = document.getElementById('education-container');
+    education.forEach((course) => {
+      const educationDiv = document.createElement('div');
+      educationDiv.innerHTML = `
+        <h2>${course.title}</h2>
+        <p>${course.description}</p>
+        <a href="${course.URL}">View course</a> 
+      `;
+      containerEdu.appendChild(educationDiv);
+    });
+  })
+  .catch((error) => console.error('Error fetching education:', error));
 
-let index = 0;
-
-// Function to update the index of the carousel
-window.showPrevious = function (decrease) {
-  index = index - decrease;
-  // infinite scrolling
-  if (index < 0) index = liItems.length;
-  index = Math.min(Math.max(index, 0), liItems.length - 1);
-  liItems[index].scrollIntoView({ behavior: 'smooth' });
-};
-
-window.showNext = function (increase) {
-  index = index + increase;
-  // infinite scrolling
-  if (index >= liItems.length) index = 0;
-  index = Math.min(Math.max(index, 0), liItems.length - 1);
-  liItems[index].scrollIntoView({ behavior: 'smooth' });
-};
-
-// Event listener for updating the carousel
-prevButton.addEventListener('click', function () {
-  showPrevious(1);
-});
-
-nextButton.addEventListener('click', function () {
-  showNext(1);
-});
-
-animateElements.forEach((element, index) => {
-  setTimeout(() => {
-    element.classList.add('show');
-  }, index * 250);
-});
+fetch('http://localhost:5000/projects')
+  .then((response) => response.json())
+  .then((projects) => {
+    const container = document.getElementById('project-container');
+    projects.forEach((project) => {
+      const projectDiv = document.createElement('div');
+      projectDiv.innerHTML = `
+        <h2>${project.title}</h2>
+        <p>${project.description}</p>
+        <p><strong>Technologies:</strong> ${project.technology.join(', ')}</p>
+        <a href="${project.URL}">View Project</a> 
+        <img src="${project.image}" alt="${project.title}"> 
+      `;
+      container.appendChild(projectDiv);
+    });
+  })
+  .catch((error) => console.error('Error fetching projects:', error));
