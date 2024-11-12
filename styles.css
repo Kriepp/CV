@@ -78,12 +78,11 @@ header a {
 }
 
 .wrapper-education {
-  display: flex;
-  border-style: solid;
   border-radius: 2rem;
-  margin: 0.4rem 1rem;
+  margin: 0.6rem 1rem;
   padding: 0.4rem;
-  box-shadow: #0c090f59 0 0 0.4rem 0.4rem;
+  background: #e0e0e0;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
 }
 
 .wrapper-education h2 {
@@ -95,7 +94,33 @@ header a {
   padding-block: 0 0.2rem;
 }
 
+.wrapper-education a {
+  text-decoration: none;
+  font-size: x-large;
+  font-weight: 700;
+}
+
 /* projects */
+.projectsTitle {
+  margin-block-start: 2rem;
+  font-size: xx-large;
+  font-weight: 700;
+  padding-inline: 1rem;
+}
+
+#project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#project-container div {
+  margin-top: 1rem;
+  width: 20rem;
+  border-radius: 2rem;
+  background: #e0e0e0;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+}
 
 /* footer section */
 footer {
