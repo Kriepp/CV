@@ -18,7 +18,7 @@ fetch('http://localhost:5000/education')
 fetch('http://localhost:5000/projects')
   .then((response) => response.json())
   .then((projects) => {
-    const container = document.getElementById('projects-container');
+    const container = document.getElementById('project-container');
     projects.forEach((project) => {
       const projectDiv = document.createElement('div');
       projectDiv.innerHTML = `
@@ -29,5 +29,6 @@ fetch('http://localhost:5000/projects')
       `;
       container.appendChild(projectDiv);
     });
+    console.log(projects);
   })
   .catch((error) => console.error('Error fetching projects:', error));
