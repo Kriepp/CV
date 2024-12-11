@@ -1,4 +1,4 @@
-fetch('http://localhost:5000/education')
+fetch('https://api-cv-cgtp.onrender.com/education')
   .then((response) => response.json())
   .then((education) => {
     const container = document.getElementById('education-container');
@@ -15,7 +15,7 @@ fetch('http://localhost:5000/education')
   })
   .catch((error) => console.error('Error fetching education:', error));
 
-fetch('http://localhost:5000/projects')
+fetch('https://api-cv-cgtp.onrender.com/projects')
   .then((response) => response.json())
   .then((projects) => {
     const container = document.getElementById('project-container');
