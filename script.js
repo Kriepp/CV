@@ -1,3 +1,5 @@
+alert('It needs some time to fetch the data');
+
 fetch('https://api-cv-cgtp.onrender.com/education')
   .then((response) => response.json())
   .then((education) => {
