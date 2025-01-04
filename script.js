@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 alert('It needs some time to fetch the data');
 
 fetch('https://api-cv-cgtp.onrender.com/education')
@@ -34,3 +35,6 @@ fetch('https://api-cv-cgtp.onrender.com/projects')
     console.log(projects);
   })
   .catch((error) => console.error('Error fetching projects:', error));
+=======
+
+>>>>>>> refs/remotes/origin/main
