@@ -1,4 +1,6 @@
-alert('It needs some time to fetch the data');
+alert(
+  'It needs some time to fetch the data from the server, please wait a few seconds.'
+);
 
 fetch('https://api-cv-cgtp.onrender.com/education')
   .then((response) => response.json())
@@ -13,7 +15,6 @@ fetch('https://api-cv-cgtp.onrender.com/education')
       `;
       container.appendChild(educationDiv);
     });
-    console.log(education);
   })
   .catch((error) => console.error('Error fetching education:', error));
 
@@ -31,6 +32,5 @@ fetch('https://api-cv-cgtp.onrender.com/projects')
       `;
       container.appendChild(projectDiv);
     });
-    console.log(projects);
   })
   .catch((error) => console.error('Error fetching projects:', error));

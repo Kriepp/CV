@@ -1,5 +1,4 @@
-/* general styling */
-/* TODO grid responsive */
+/* General styling */
 *,
 ::after,
 ::before {
@@ -7,7 +6,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* outline: 3px lime solid; */
 }
 
 section {
@@ -28,24 +26,28 @@ header {
     rgb(4, 4, 5) 11.4%,
     rgb(41, 46, 61) 70.2%
   );
+}
+
+header nav {
   display: flex;
   justify-content: flex-end;
-  padding-block: 0.5rem;
-  position: sticky;
+  align-items: center;
+  padding-block: 0.2rem;
 }
 
 header a {
   font-family: 'Times New Roman', Times, serif;
-  font-weight: 200;
-  padding-inline: 0.5rem;
+  font-weight: 600;
+  margin-inline: 0.4rem;
   color: white;
   text-decoration: none;
 }
 
-/* main section */
-
+/* Main section */
 .wrapper-introduction {
-  display: flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-inline: 1rem;
   margin-bottom: 3rem;
 }
@@ -53,36 +55,37 @@ header a {
 .wrapper-introduction img {
   filter: grayscale();
   padding-block: 1rem;
-  width: 80%;
-}
-
-.wrapper-introduction h1,
-.wrapper-introduction h2 {
-  text-shadow: 0 0 1rem #0c090f59, 0 0 1rem #1c172059;
+  width: 100%;
 }
 
 .wrapper-introduction h1 {
-  font-size: xx-large;
+  font-size: large;
   font-weight: 900;
+  text-shadow: 0 0 1rem #0c090f59, 0 0 1rem #1c172059;
 }
 
 .wrapper-introduction h2 {
-  font-size: large;
+  font-size: medium;
+  text-shadow: 0 0 1rem #0c090f59, 0 0 1rem #1c172059;
 }
 
-/* education */
+/* Education */
 .edu-title {
   padding-left: 1rem;
   margin-top: 1rem;
-  font-size: xx-large;
+  font-size: large;
+  font-weight: 900;
+  text-align: center;
 }
 
 .wrapper-education {
+  width: 90%;
   border-radius: 2rem;
   margin: 0.6rem 1rem;
   padding: 0.4rem;
   background: #e0e0e0;
   box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  padding: 0.6rem;
 }
 
 .wrapper-education h2 {
@@ -96,29 +99,28 @@ header a {
 
 .wrapper-education a {
   text-decoration: none;
-  font-size: x-large;
+  font-size: medium;
   font-weight: 700;
 }
 
-/* projects */
-/* ! fa clasa pentru titluri, sa fie aceeasi */
+/* Projects */
 .projectsTitle {
   padding-left: 1rem;
   margin-top: 1rem;
-  font-size: xx-large;
+  font-size: large;
+  text-align: center;
 }
 
-/* ! Poate renunta la ID */
 #project-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   margin-block: 0 2rem;
 }
 
 #project-container div {
   margin-top: 1rem;
-  width: 90vw;
+  width: 90%;
   border-radius: 2rem;
   background: #e0e0e0;
   box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
@@ -130,18 +132,33 @@ header a {
   font-weight: 900;
 }
 
-/* footer section */
-footer {
+.wrapper-projects p {
+  padding-block: 0 0.4rem;
+}
+
+.wrapper-projects a {
+  text-decoration: none;
+  font-size: medium;
+  font-weight: 700;
+}
+
+/* Footer section */
+footer,
+.footer-nav {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  align-items: center;
   margin: 0.5em auto;
 }
 
 .footer-nav {
-  display: flex;
-  justify-content: center;
-  margin: 0.5em auto;
   gap: 1em;
+}
+
+.footer-nav a {
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 small {
@@ -150,22 +167,47 @@ small {
   justify-content: center;
 }
 
-/* animation */
-/* !Not working */
-/* .animate {
-  opacity: 0;
-  translate: 0 0.75rem;
-  transition: 700ms cubic-bezier(0, 0, 0.2, 1);
+/* Media queries for tablets and desktops */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  header a {
+    padding-inline: 0.5rem;
+  }
+
+  .edu-title,
+  .projectsTitle {
+    font-size: xx-large;
+    text-align: left;
+  }
+
+  .wrapper-education,
+  #project-container div {
+    width: 90vw;
+  }
 }
 
-.animate.show {
-  opacity: 1;
-  translate: 0, 0;
-} */
+@media only screen and (min-width: 769px) {
+  header {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
 
-/* Media at bottom, responsivnes of the web application*/
-@media only screen and (min-width: 380px) {
-}
+  header a {
+    padding-inline: 0.5rem;
+  }
 
-@media only screen and (min-width: 768px) {
+  .edu-title,
+  .projectsTitle {
+    font-size: xx-large;
+    text-align: left;
+  }
+
+  .wrapper-education,
+  #project-container div {
+    width: 90vw;
+  }
 }
