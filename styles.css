@@ -86,7 +86,11 @@ header a {
 }
 
 .wrapper-education h2 {
+<<<<<<< HEAD
   padding-block: 0.5rem 0;
+=======
+  padding-block: 0.6rem 0;
+>>>>>>> 93ec89d835161c5abdc7d685deef54136c8e410f
   font-weight: 900;
 }
 
@@ -101,6 +105,7 @@ header a {
 }
 
 /* projects */
+<<<<<<< HEAD
 .projectsTitle {
   margin-block-start: 2rem;
   font-size: xx-large;
@@ -108,18 +113,45 @@ header a {
   padding-inline: 1rem;
 }
 
+=======
+/* ! fa clasa pentru titluri, sa fie aceeasi */
+.projectsTitle {
+  padding-left: 1rem;
+  margin-top: 1rem;
+  font-size: xx-large;
+}
+
+/* ! Poate renunta la ID */
+>>>>>>> 93ec89d835161c5abdc7d685deef54136c8e410f
 #project-container {
   display: flex;
   justify-content: center;
   align-items: center;
+<<<<<<< HEAD
+=======
+  margin-block: 0 2rem;
+>>>>>>> 93ec89d835161c5abdc7d685deef54136c8e410f
 }
 
 #project-container div {
   margin-top: 1rem;
+<<<<<<< HEAD
   width: 20rem;
   border-radius: 2rem;
   background: #e0e0e0;
   box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+=======
+  width: 90vw;
+  border-radius: 2rem;
+  background: #e0e0e0;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+}
+
+.wrapper-projects h2 {
+  font-weight: 900;
+>>>>>>> 93ec89d835161c5abdc7d685deef54136c8e410f
 }
 
 /* footer section */
