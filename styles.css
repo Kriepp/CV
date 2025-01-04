@@ -86,7 +86,7 @@ header a {
 }
 
 .wrapper-education h2 {
-  padding-block: 0.5rem 0;
+  padding-block: 0.6rem 0;
   font-weight: 900;
 }
 
@@ -101,25 +101,33 @@ header a {
 }
 
 /* projects */
+/* ! fa clasa pentru titluri, sa fie aceeasi */
 .projectsTitle {
-  margin-block-start: 2rem;
+  padding-left: 1rem;
+  margin-top: 1rem;
   font-size: xx-large;
-  font-weight: 700;
-  padding-inline: 1rem;
 }
 
+/* ! Poate renunta la ID */
 #project-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-block: 0 2rem;
 }
 
 #project-container div {
   margin-top: 1rem;
-  width: 20rem;
+  width: 90vw;
   border-radius: 2rem;
   background: #e0e0e0;
   box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+}
+
+.wrapper-projects h2 {
+  font-weight: 900;
 }
 
 /* footer section */
