@@ -109,6 +109,7 @@ header a {
   margin-top: 1rem;
   font-size: large;
   text-align: center;
+  font-weight: 900;
 }
 
 #project-container {
@@ -178,15 +179,45 @@ small {
     padding-inline: 0.5rem;
   }
 
+  .wrapper-introduction {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .wrapper-introduction img {
+    width: 20rem;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .introduction-title {
+    height: auto;
+    width: 10rem;
+    margin-top: 12rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
   .edu-title,
   .projectsTitle {
     font-size: xx-large;
-    text-align: left;
+    text-align: center;
   }
 
   .wrapper-education,
   #project-container div {
-    width: 90vw;
+    width: 95vw;
+    height: auto;
+  }
+
+  .wrapper-education {
+    display: flex;
+    align-items: flex-start;
   }
 }
 
