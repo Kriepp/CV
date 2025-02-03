@@ -1,5 +1,5 @@
 alert(
-  'It needs some time to fetch the data from the server, please wait a few seconds.'
+  'It needs some time to fetch the data from the server, please wait a few seconds. \n For now it doesnt do anything, its only visual.'
 );
 
 fetch('https://api-cv-cgtp.onrender.com/education')
