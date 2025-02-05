@@ -24,6 +24,9 @@ fetch('https://api-cv-cgtp.onrender.com/projects')
     const container = document.getElementById('project-container');
     projects.forEach((project) => {
       const projectDiv = document.createElement('div');
+      const projectClass =
+        project.status === 'unfinished' ? 'unfinished' : 'finished';
+      projectDiv.classList.add('project', projectClass);
       projectDiv.innerHTML = `
         <h2>${project.title}</h2>
         <p>${project.description}</p>
