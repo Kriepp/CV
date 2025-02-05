@@ -28,6 +28,7 @@ fetch('https://api-cv-cgtp.onrender.com/projects')
         project.status === 'unfinished' ? 'unfinished' : 'finished';
       projectDiv.classList.add('project', projectClass);
       projectDiv.innerHTML = `
+        <img src="${project.image}" alt="${project.title}" />
         <h2>${project.title}</h2>
         <p>${project.description}</p>
         <p><strong>Technologies:</strong> ${project.technology.join(', ')}</p>
