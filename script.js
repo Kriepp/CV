@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
       education.forEach((course) => {
         const educationDiv = document.createElement('div');
         educationDiv.innerHTML = `
-          <h2>${course.title}</h2>
+          <h3>${course.title}</h3>
           <p>${course.description}</p>
           <a href="${course.URL}" target="_blank">Learn More</a>
         `;

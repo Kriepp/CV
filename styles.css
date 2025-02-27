@@ -85,24 +85,23 @@ header a {
   padding-block: 1rem;
   width: 100%;
   height: auto;
+  border-radius: 50%;
 }
 
 .wrapper-introduction h1 {
-  font-size: xx-large;
-  font-weight: 900;
-  text-shadow: 0 0 1rem #0c090f59, 0 0 1rem #1c172059;
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #111827;
 }
 
 .wrapper-introduction h2 {
-  font-size: medium;
-  text-shadow: 0 0 1rem #0c090f59, 0 0 1rem #1c172059;
+  font-size: 1.5rem;
+  color: #4b5563;
 }
 
 /* Education */
 .edu-title {
-  padding-left: 1rem;
-  margin-top: 1rem;
-  font-size: large;
+  margin-top: 2rem;
   font-weight: 900;
   text-align: center;
 }
@@ -111,15 +110,26 @@ header a {
   width: 90%;
   border-radius: 2rem;
   margin: 0.6rem 1rem;
-  padding: 0.4rem;
-  background: #e0e0e0;
-  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  background: white;
   padding: 0.6rem;
+  box-shadow: 0 0.1rem 0.6rem rgba(0, 0, 0, 0.1);
 }
 
-.wrapper-education h2 {
-  padding-block: 0.6rem 0;
-  font-weight: 900;
+.wrapper-education div {
+  border-bottom: 0.1rem solid;
+  width: 100%;
+}
+
+.wrapper-education div:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.wrapper-education h3 {
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 0.5rem;
 }
 
 .wrapper-education p {
@@ -139,6 +149,7 @@ header a {
   font-size: large;
   text-align: center;
   font-weight: 900;
+  color: #4b5563;
 }
 
 #project-container {
@@ -152,8 +163,9 @@ header a {
   margin-top: 1rem;
   width: 90%;
   border-radius: 2rem;
-  background: #e0e0e0;
-  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  background: white;
+  padding: 0.6rem;
+  box-shadow: 0 0.1rem 0.6rem rgba(0, 0, 0, 0.1);
   padding-inline: 1rem;
   padding-block: 0.5rem;
   display: flex;
@@ -169,7 +181,9 @@ header a {
 }
 
 .wrapper-projects h2 {
-  font-weight: 900;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
 }
 
 .wrapper-projects p {
@@ -234,13 +248,9 @@ small {
     padding-inline: 0.5rem;
   }
 
-  .wrapper-introduction {
+  .wrapper-introduction article:first-child {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 20px;
   }
 
   .wrapper-introduction img {
@@ -250,18 +260,8 @@ small {
   }
 
   .introduction-title {
-    height: auto;
-    width: 10rem;
     margin-top: 12rem;
-    display: flex;
-    flex-direction: column;
     gap: 1rem;
-  }
-
-  .edu-title,
-  .projectsTitle {
-    font-size: xx-large;
-    text-align: center;
   }
 
   .wrapper-education,
@@ -277,24 +277,19 @@ small {
 }
 
 @media only screen and (min-width: 769px) {
-  header {
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-
   header a {
     padding-inline: 0.5rem;
   }
 
   .wrapper-introduction {
-    display: flex;
     flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
   }
 
   .wrapper-introduction img {
     width: 20rem;
     height: auto;
-    margin-left: 30%;
   }
 
   .introduction-title {
@@ -306,20 +301,23 @@ small {
 
   .introduction-title h1,
   .introduction-title h2 {
-    font-size: xx-large;
+    font-size: 1.5rem;
   }
 
   .edu-title,
   .projectsTitle {
-    font-size: x-large;
-    text-align: center;
+    font-size: 2rem;
     margin-bottom: 1rem;
   }
 
   .wrapper-education {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     margin: auto;
+  }
+
+  #project-container {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
   }
 }
