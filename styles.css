@@ -31,8 +31,8 @@ section ul {
   border: 4px solid #f3f3f3;
   border-top: 4px solid #3498db;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 5rem;
+  height: 5rem;
   animation: spin 1s linear infinite;
   margin: 20px auto;
   display: block;
@@ -117,7 +117,6 @@ header a {
 
 .wrapper-education div {
   border-bottom: 0.1rem solid;
-  width: 100%;
 }
 
 .wrapper-education div:last-child {
@@ -313,6 +312,10 @@ small {
   .wrapper-education {
     display: flex;
     margin: auto;
+  }
+
+  .wrapper-education div {
+    width: 100%;
   }
 
   #project-container {
