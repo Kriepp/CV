@@ -2,7 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const educationContainer = document.getElementById('education-container');
 
   // Show a loading animation only for education
-  educationContainer.innerHTML = `<div class="loader"></div>`;
+  educationContainer.innerHTML = `<div> Loading the page for the first time can take more time due to free tier API. Sorry.</div>
+  <div class="loader"></div>`;
 
   // Fetch Education Data
   fetch('https://api-cv-cgtp.onrender.com/education')

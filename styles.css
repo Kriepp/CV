@@ -31,8 +31,8 @@ section ul {
   border: 4px solid #f3f3f3;
   border-top: 4px solid #3498db;
   border-radius: 50%;
-  width: 5rem;
-  height: 5rem;
+  min-width: 5rem;
+  min-height: 5rem;
   animation: spin 1s linear infinite;
   margin: 20px auto;
   display: block;
@@ -278,6 +278,10 @@ small {
 @media only screen and (min-width: 769px) {
   header a {
     padding-inline: 0.5rem;
+  }
+
+  .loader {
+    width: auto !important;
   }
 
   .wrapper-introduction {
