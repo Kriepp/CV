@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   const educationContainer = document.getElementById('education-container');
 
-  // Show a loading animation only for education
-  educationContainer.innerHTML = `<div> Loading the page for the first time can take more time due to free tier API. Sorry.</div>
+  // Show a loading animation
+  educationContainer.innerHTML = `<div> Loading the page for the first time can take more time due to free tier API. Sorry. The greyed out projects are unfinished. </div>
   <div class="loader"></div>`;
 
   // Fetch Education Data
